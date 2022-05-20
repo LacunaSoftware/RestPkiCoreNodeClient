@@ -27,7 +27,7 @@ class RestPKICoreClient {
 		}
 
 		let header = {
-			'X-RestPki-Client': `NodeJS ${VERSION}`
+			'X-RestPkiCore-Client': `NodeJS ${VERSION}`
 		};
 
 		if (this._accessToken) {
