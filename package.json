@@ -3,6 +3,7 @@
     "version": "0.9.0",
     "description": "Classes to consume Lacuna Software REST PKI Core",
     "main": "app.js",
+    "type": "commonjs",
     "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
       "start": "node app.js"

@@ -8,10 +8,7 @@ http.createServer(function (req, res) {
   res.end('Hello World!');
 }).listen(8080);
 
-this._client = new RestPKICoreClient;
+this._client = new RestPKICoreClient('https://core.pki.rest/', API_KEY, null, null);
 
-this._client._accessToken = API_KEY;
-this._client._instance
-
-this._signSession = SignatureSessionRestCore(this._client);
-this._signSession.startSignatureSession();
+this._signSession = new SignatureSessionRestCore(this._client);
+this._signSession.getSignatureSession('3fa85f64-5717-4562-b3fc-2c963f66afa6');

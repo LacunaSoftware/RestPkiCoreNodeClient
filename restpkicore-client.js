@@ -1,6 +1,7 @@
 'use strict';
-import { create } from 'axios';
-import { VERSION } from './lib-version';
+const axios = require('axios');
+const VERSION = require('./lib-version');
+const {RestError} = require('./rest-error');
 
 class RestPKICoreClient {
 
@@ -36,7 +37,11 @@ class RestPKICoreClient {
 
 		param['headers'] = header;
 
-		this._instance = create(param);
+		this._instance = axios.create(param);
+	}
+
+	getRestClient() {
+		return new RestPKICoreClient(this._endpointUrl, this._accessToken, this._proxy, this._timeout);
 	}
 
 	get(url) {
@@ -115,5 +120,5 @@ class RestPKICoreClient {
 
 }
 
-const _RestPKICoreClient = RestPKICoreClient;
-export { _RestPKICoreClient as RestPKICoreClient };
+
+exports.RestPKICoreClient = RestPKICoreClient;
