@@ -1,7 +1,8 @@
 'use strict';
 const axios = require('axios');
 const VERSION = require('./lib-version');
-const {RestError} = require('./rest-error');
+const { RestError } = require('./lib/rest-error');
+const { SignatureSessionRestCoreError } = require('./lib/signature-session-rest-core-error');
 
 class RestPKICoreClient {
 
@@ -27,26 +28,27 @@ class RestPKICoreClient {
 			param['proxy'] = this._proxy;
 		}
 
-		let header = {
-			'X-RestPkiCore-Client': `NodeJS ${VERSION}`
-		};
+		let header = {};
 
 		if (this._accessToken) {
-			header['Authorization'] = `Bearer ${this._accessToken}`;
+			// header['Authorization'] = `Bearer ${this._accessToken}`;
+			header['X-Api-Key'] = `${this._accessToken}`;
 		}
 
 		param['headers'] = header;
 
 		this._instance = axios.create(param);
+		console.log(this._instance);
 	}
 
 	getRestClient() {
 		return new RestPKICoreClient(this._endpointUrl, this._accessToken, this._proxy, this._timeout);
 	}
 
-	get(url) {
+	get(url, data = null) {
 		let verb = 'GET';
-		return this._instance.get(url)
+		let paramUrl = data ? url+data : url;
+		return this._instance.get(paramUrl)
 			.then((response) => {
 				return response.data;
 			})
@@ -55,7 +57,7 @@ class RestPKICoreClient {
 					let errObj = {value: error.status};
 					this._checkResponse(errObj, error.response, verb, url);
 					throw errObj.value;
-				} else if (error.request) {
+				} else if (error.request) {	
 					throw new RestUnreachableError(verb, url);
 				} else {
 					throw error;
@@ -105,15 +107,17 @@ class RestPKICoreClient {
 				if (response.code === 'ValidationError') {
 					let vr = new ValidationResults(response.validationResults);
 					errObj.value = new ValidationError(verb, url, vr);
-				} else {
-					errObj.value = new RestPkiError(verb, url, response.code,
-						response.detail);
+				} else if(response.code === 'SignatureSessionNotFound') {
+					errObj.value = new SignatureSessionRestCoreError(verb, url, response.code, response.detail);
+				}
+				else {
+					errObj.value = new RestPkiError(verb, url, response.code, response.detail);
 				}
 			} else {
-				errObj.value = new RestError(verb, url, statusCode,
-					response.message);
+				errObj.value = new RestError(verb, url, statusCode, response.message);
 			}
 		} catch (error) {
+
 			errObj.value = new RestError(verb, url);
 		}
 	}
