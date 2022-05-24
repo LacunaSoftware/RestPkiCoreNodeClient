@@ -1,11 +1,11 @@
 class DocumentFile
 {
-    constructor(name, length, contentType, location)
+    constructor(model)
     {
-       this._name = name;
-       this._length = length;
-       this._contentType = contentType;
-       this._location = location;
+       this._name = model.name || null;
+       this._length = model.length || null;
+       this._contentType = model.contentType || null;
+       this._location = model.location || null;
     }
 }
    
