@@ -1,69 +1,21 @@
 class DocumentSummary
 {
-    id;
-    key;
-    formattedKey;
-    originalFile;
-    signedFile;
-    avaliableUntil;
-    signatureType;
-
-    construct(model)
+    constructor(id, key, formattedKey, originalFile, signedFile, availableUntil, signatureType)
     {
-        this._id = model.id;
-        this._key = model.key;
-        this._formattedKey = model.formattedKey;
-        if (typeof model.originalFile !== undefined) {
-            this._originalFile = new DocumentFile(model.originalFile);
+        this._id = id || null;
+        this._key = key || null;
+        this._formattedKey = formattedKey || null;
+        
+        if (typeof originalFile !== undefined) {
+            this._originalFile = new DocumentFile(originalFile);
         }
-        if (typeof model.signedFile !== undefined) {
-            this.signedFile = new DocumentFile(model.signedFile);
+        if (typeof signedFile !== undefined) {
+            this._signedFile = new DocumentFile(signedFile);
         }
-        if ( typeof model.avaliableUntil !== undefined) {
-            this._avaliableUntil = new DateTime(model.avaliableUntil);
+        if ( typeof availableUntil !== undefined) {
+            this._availableUntil = new Date(availableUntil);
         }
-        this.signatureType = model.signatureType;
+        
+        this._signatureType = signatureType || null;
     }
-
-
-    getId()
-    {
-        return this._id;
-    }
-
-
-    getKey()
-    {
-        return this._key;
-    }
-
-   
-    getFormattedKey()
-    {
-        return this._formattedKey;
-    }
-
-    
-    getOriginalFile()
-    {
-        return this._originalFile;
-    }
-
-    getSignedFile()
-    {
-        return this.signedFile;
-    }
-
-    getAvaliableUntil()
-    {
-        return this.avaliableUntil;
-    }
-    
-    getSignatureType()
-    {
-        return this._signatureType;
-    }
-
-
-
 }
