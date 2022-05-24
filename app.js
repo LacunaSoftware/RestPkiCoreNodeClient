@@ -4,6 +4,7 @@ const { SignatureSessionRestCore : SignatureSessionRestCore } = require('./lib/s
 const { RestPKICoreClient: RestPKICoreClient } = require('./lib/restpkicore-client');
 const { DocumentSummary: DocumentSummary } = require('./lib/document-summary')
 const { SignatureSessionRequestModel: SignatureSessionRequestModel} = require('./lib/signature-session-rest-core-model');
+const { DocumentMetadata: DocumentMetadata } = require('./lib/document-metadata');
 
 // Live server, not needed for now 
 // http.createServer(function (req, res) {
@@ -20,7 +21,9 @@ async function testLog(){
 }
 var requestSignature = {
   'documentMetadata': 5,
-  'enableBackgroundProcessing': true
+  'enableBackgroundProcessing': true,
+  'documents': {
+  }
 }
 
 var signatureRequestModel = new SignatureSessionRequestModel(requestSignature);
