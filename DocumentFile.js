@@ -1,79 +1,49 @@
-<?php
-
-
-namespace Lacuna\RestPki;
-
-/**
- * Class DocumentFile
- * @package Lacuna\RestPki
- *
- * @property-read string $name
- * @property-read string $length
- * @property-read string $contentType
- * @property-read string $location
- */
 class DocumentFile
 {
-    protected $_name;
-    protected $_length;
-    protected $_contentType;
-    protected $_location;
+     $_name;
+     $_length;
+     $_contentType;
+     $_location;
 
-    public function __construct($model)
+    construct(model)
     {
-        $this->_name = $model->name;
-        $this->_length = $model->length;
-        $this->_contentType = $model->contentType;
-        $this->_location = $model->location;
+       this._name = model.name;
+       this._length = model.length;
+       this._contentType = model.contentType;
+       this._location = model.location;
     }
 
-    protected function getName(){
-        return $this->_name;
+    getName(){
+        returnthis._name;
     }
 
-    protected function getLength(){
-        return $this->_length;
+    getLength(){
+        returnthis._length;
     }
 
-    protected function getContentType(){
-        return $this->_contentType;
+    getContentType(){
+        returnthis._contentType;
     }
 
-    protected function getLocation(){
-        return $this->_location;
+     getLocation(){
+        returnthis._location;
     }
 
-    public function __get($name)
+    get(name)
     {
-        switch ($name) {
+        switch (name) {
             case "name":
-                return $this->getName();
+                return this.getName();
             case "length":
-                return $this->getLength();
+                return this.getLength();
             case "contentType":
-                return $this->getContentType();
+                return this.getContentType();
             case "location":
-                return $this->getLocation();
+                return this.getLocation();
             default:
-                trigger_error('Undefined property: ' . __CLASS__ . '::$' . $name);
-                return null;
-        }
-    }
-
-    public function __isset($name)
-    {
-        switch ($name) {
-            case "name":
-                return isset($this->_name);
-            case "length":
-                return isset($this->_length);
-            case "contentType":
-                return isset($this->_contentType);
-            case "location":
-                return isset($this->_location);
-            default:
-                trigger_error('Undefined property: ' . __CLASS__ . '::$' . $name);
+                trigger_error('Undefined property: ' . __CLASS__ + '::$'  + name);
                 return null;
         }
     }
 }
+   
