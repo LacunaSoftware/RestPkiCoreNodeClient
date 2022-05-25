@@ -2,9 +2,8 @@ var http = require('http');
 const { API_KEY } = require('./apikey');
 const { SignatureSessionRestCore : SignatureSessionRestCore } = require('./lib/signature-session-rest-core');
 const { RestPKICoreClient: RestPKICoreClient } = require('./lib/restpkicore-client');
-const { DocumentSummary: DocumentSummary } = require('./lib/document-summary')
-const { SignatureSessionRequestModel: SignatureSessionRequestModel} = require('./lib/signature-session-rest-core-model');
-const { DocumentMetadata: DocumentMetadata } = require('./lib/document-metadata');
+const { CreateSignatureSessionRequestModel: CreateSignatureSessionRequestModel} = require('./lib/create-signature-session-request-model');
+const { CreateSignatureSessionResponseModel: CreateSignatureSessionResponseModel } = require('./lib/create-signature-session-response-model');
 
 // Live server, not needed for now 
 // http.createServer(function (req, res) {
@@ -13,24 +12,35 @@ const { DocumentMetadata: DocumentMetadata } = require('./lib/document-metadata'
 // }).listen(8080);
 
 var client = new RestPKICoreClient('https://core.pki.rest/', API_KEY, null, null);
+var _signSession = new SignatureSessionRestCore(client);
 
-async function testLog(){
-  this._signSession = new SignatureSessionRestCore(client);
-  const response =  await this._signSession.getSignatureSession('3fa85f64-5717-4562-b3fc-2c963f66afa6');
+async function testLog(signSession){
+  const response =  await signSession.getSignatureSession('3fa85f64-5717-4562-b3fc-2c963f66afa6');
   // console.log(response);
 }
-var requestSignature = {
-  'documentMetadata': 5,
-  'enableBackgroundProcessing': true,
-  'documents': {
+
+async function testCreateSignatureSession(signSession){
+  var requestSignature = {
+    'documentMetadata': {},
+    'enableBackgroundProcessing': true,
+    'disableDownloads': true,
+    'documents': { 
+      'file': {
+        'url': 'https://cdn.lacunasoftware.com/restpki/Manual_de_Contexto_de_Seguranca_Global.pdf'
+      }
+    },
+    'certificateRequirements' : []
   }
+  
+  var createSignatureRequestModel = new CreateSignatureSessionRequestModel(requestSignature);
+  console.log(createSignatureRequestModel.disableDownloads);
+
+  const response = new CreateSignatureSessionResponseModel(await signSession.postSignatureSession(createSignatureRequestModel));
+
+  console.log(response);
+
 }
 
-var signatureRequestModel = new SignatureSessionRequestModel(requestSignature);
-console.log(signatureRequestModel._documentMetadata);
-
-console.log(requestSignature['enableBackgroundProcessing']);
-console.log(requestSignature['documentMetadata']);
-
 // testLog();
+testCreateSignatureSession(_signSession);
 
