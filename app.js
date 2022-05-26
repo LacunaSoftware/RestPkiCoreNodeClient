@@ -4,6 +4,8 @@ const { SignatureSessionRestCore : SignatureSessionRestCore } = require('./lib/s
 const { RestPKICoreClient: RestPKICoreClient } = require('./lib/restpkicore-client');
 const { CreateSignatureSessionRequestModel: CreateSignatureSessionRequestModel} = require('./lib/create-signature-session-request-model');
 const { CreateSignatureSessionResponseModel: CreateSignatureSessionResponseModel } = require('./lib/create-signature-session-response-model');
+const { AuthenticationRestPkiCore } = require('./lib/authentication-restpki-core');
+const { PrepareAuthenticationRequestModel : PrepareAuthenticationRequestModel} = require('./lib/prepare-authentication-request');
 
 // Live server, not needed for now 
 // http.createServer(function (req, res) {
@@ -42,5 +44,21 @@ async function testCreateSignatureSession(signSession){
 }
 
 // testLog();
-testCreateSignatureSession(_signSession);
+// testCreateSignatureSession(_signSession);
+
+async function testPrepareAuthenticationRequest(client) {
+  let auth = new AuthenticationRestPkiCore(client);
+  var prepareAuthParams = {
+    'securityContextId': '3fa85f64-5717-4562-b3fc-2c963f66afa6',
+    'ignoreRevocationStatusUnknown': 'true'
+  }
+
+
+  let prepareAuthRequest = new PrepareAuthenticationRequestModel(prepareAuthParams);
+  let prepareAuthResponse = await auth.prepareCertificateAuthentication(prepareAuthRequest);
+
+  console.log('response', prepareAuthResponse);
+}
+
+testPrepareAuthenticationRequest(client);
 
