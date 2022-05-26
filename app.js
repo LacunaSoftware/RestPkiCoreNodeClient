@@ -6,6 +6,9 @@ const { CreateSignatureSessionRequestModel: CreateSignatureSessionRequestModel} 
 const { CreateSignatureSessionResponseModel: CreateSignatureSessionResponseModel } = require('./lib/create-signature-session-response-model');
 const { AuthenticationRestPkiCore } = require('./lib/authentication-restpki-core');
 const { PrepareAuthenticationRequestModel : PrepareAuthenticationRequestModel} = require('./lib/prepare-authentication-request');
+const { PrepareAuthenticationResponseModel : PrepareAuthenticationResponseModel } = require('./lib/prepare-authentication-response');
+const { CompleteAuthenticationRequestModel : CompleteAuthenticationRequestModel } = require('./lib/complete-authentication-request-model');
+const { CompleteAuthenticationResponseModel: CompleteAuthenticationResponseModel } = require('./lib/complete-authentication-response-model');
 
 // Live server, not needed for now 
 // http.createServer(function (req, res) {
@@ -48,17 +51,48 @@ async function testCreateSignatureSession(signSession){
 
 async function testPrepareAuthenticationRequest(client) {
   let auth = new AuthenticationRestPkiCore(client);
-  var prepareAuthParams = {
+  
+  let prepareAuthParams = {
     'securityContextId': '3fa85f64-5717-4562-b3fc-2c963f66afa6',
     'ignoreRevocationStatusUnknown': 'true'
   }
 
-
   let prepareAuthRequest = new PrepareAuthenticationRequestModel(prepareAuthParams);
-  let prepareAuthResponse = await auth.prepareCertificateAuthentication(prepareAuthRequest);
-
-  console.log('response', prepareAuthResponse);
+  // DEBUG
+  // console.log(prepareAuthRequest);
+  
+  let prepareAuthResponse = new PrepareAuthenticationResponseModel(await auth.prepareCertificateAuthentication(prepareAuthRequest));
+  // DEBUG
+  // console.log('response', prepareAuthResponse);
+  // console.log('algorithm = ', prepareAuthResponse._toSignHash._algorithm);
+  return prepareAuthResponse;
 }
 
-testPrepareAuthenticationRequest(client);
+async function testCompleteAuthenticationRequest(client, state){
+  let auth = new AuthenticationRestPkiCore(client);
+
+  let prepareAuthParams = {
+    'state': state,
+    'certificate': null,
+    'signature': null
+  }
+
+  let completeCertAuthReq = new CompleteAuthenticationRequestModel(prepareAuthParams);
+  // DEBUG
+  // console.log('completeCertAuthReq: ', completeCertAuthReq);
+
+  let completeCertAuthResponse = 
+    auth.completeCertificateAuthentication(new CompleteAuthenticationResponseModel(await auth.completeCertificateAuthentication(completeCertAuthReq)));
+  console.log('completeCertAuthResponse', completeCertAuthResponse);
+
+  return completeCertAuthResponse;
+
+}
+
+testPrepareAuthenticationRequest(client).then((res) => {
+  // console.log(res);
+  testCompleteAuthenticationRequest(client, res._state).then((result) => {
+    console.log(result);
+  });
+});
 
