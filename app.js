@@ -4,11 +4,13 @@ const { SignatureSessionRestCore : SignatureSessionRestCore } = require('./lib/s
 const { RestPKICoreClient: RestPKICoreClient } = require('./lib/restpkicore-client');
 const { CreateSignatureSessionRequestModel: CreateSignatureSessionRequestModel} = require('./lib/create-signature-session-request-model');
 const { CreateSignatureSessionResponseModel: CreateSignatureSessionResponseModel } = require('./lib/create-signature-session-response-model');
-const { AuthenticationRestPkiCore } = require('./lib/authentication-restpki-core');
+const { AuthenticationRestPkiCore: AuthenticationRestPkiCore } = require('./lib/authentication-restpki-core');
 const { PrepareAuthenticationRequestModel : PrepareAuthenticationRequestModel} = require('./lib/prepare-authentication-request');
 const { PrepareAuthenticationResponseModel : PrepareAuthenticationResponseModel } = require('./lib/prepare-authentication-response');
 const { CompleteAuthenticationRequestModel : CompleteAuthenticationRequestModel } = require('./lib/complete-authentication-request-model');
 const { CompleteAuthenticationResponseModel: CompleteAuthenticationResponseModel } = require('./lib/complete-authentication-response-model');
+const { default: robin, default: batman, Batwoman, Gotham } = require('./lib');
+
 
 // Live server, not needed for now 
 // http.createServer(function (req, res) {
@@ -36,8 +38,10 @@ async function testCreateSignatureSession(signSession){
     },
     'certificateRequirements' : []
   }
+
+  createSignatureRequestModel.setDisableDownloads(requestSignature['disableDownloads']);
   
-  var createSignatureRequestModel = new CreateSignatureSessionRequestModel(requestSignature);
+  var createSignatureRequestModel = new CreateSignatureSessionRequestModel();
   console.log(createSignatureRequestModel.disableDownloads);
 
   const response = new CreateSignatureSessionResponseModel(await signSession.postSignatureSession(createSignatureRequestModel));
@@ -61,9 +65,9 @@ async function testPrepareAuthenticationRequest(client) {
   // DEBUG
   // console.log(prepareAuthRequest);
   
-  let prepareAuthResponse = new PrepareAuthenticationResponseModel(await auth.prepareCertificateAuthentication(prepareAuthRequest));
+  let prepareAuthResponse = new PrepareAuthenticationResponseModel(await auth.prepareCertificateAuthentication(prepareAuthParams));
   // DEBUG
-  // console.log('response', prepareAuthResponse);
+  console.log('response', prepareAuthResponse);
   // console.log('algorithm = ', prepareAuthResponse._toSignHash._algorithm);
   return prepareAuthResponse;
 }
@@ -71,15 +75,15 @@ async function testPrepareAuthenticationRequest(client) {
 async function testCompleteAuthenticationRequest(client, state){
   let auth = new AuthenticationRestPkiCore(client);
 
-  let prepareAuthParams = {
+  let completeAuthParams = {
     'state': state,
     'certificate': null,
     'signature': null
   }
 
-  let completeCertAuthReq = new CompleteAuthenticationRequestModel(prepareAuthParams);
+  let completeCertAuthReq = new CompleteAuthenticationRequestModel(completeAuthParams);
   // DEBUG
-  // console.log('completeCertAuthReq: ', completeCertAuthReq);
+  console.log('completeCertAuthReq: ', completeCertAuthReq);
 
   let completeCertAuthResponse = 
     auth.completeCertificateAuthentication(new CompleteAuthenticationResponseModel(await auth.completeCertificateAuthentication(completeCertAuthReq)));
@@ -89,10 +93,11 @@ async function testCompleteAuthenticationRequest(client, state){
 
 }
 
-testPrepareAuthenticationRequest(client).then((res) => {
-  // console.log(res);
-  testCompleteAuthenticationRequest(client, res._state).then((result) => {
-    console.log(result);
-  });
-});
+// testPrepareAuthenticationRequest(client).then((res) => {
+//   // console.log(res);
+//   testCompleteAuthenticationRequest(client, res._state).then((result) => {
+//     console.log(result);
+//   });
+// });
 
+// new Gotham({redirectUrl: , sessionId:})
