@@ -1,3 +1,5 @@
 node_modules
 package-lock.json
 apikey.js
+swagger-codegen-cli-3.0.0-rc1.jar
+*.jar
