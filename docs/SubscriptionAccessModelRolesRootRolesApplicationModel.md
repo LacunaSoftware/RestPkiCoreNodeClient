@@ -1,4 +1,4 @@
-# RestPkiCoreApi.SubscriptionAccessModelRolesRootRolesApplicationModel
+# RestPkiCoreClient.SubscriptionAccessModelRolesRootRolesApplicationModel
 
 ## Properties
 Name | Type | Description | Notes

@@ -21,9 +21,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.RestPkiCoreApi);
+    factory(root.expect, root.RestPkiCoreClient);
   }
-}(this, function(expect, RestPkiCoreApi) {
+}(this, function(expect, RestPkiCoreClient) {
   'use strict';
 
   var instance;
@@ -31,12 +31,12 @@
   describe('(package)', function() {
     describe('DocumentQueryResponse', function() {
       beforeEach(function() {
-        instance = new RestPkiCoreApi.DocumentQueryResponse();
+        instance = new RestPkiCoreClient.DocumentQueryResponse();
       });
 
       it('should create an instance of DocumentQueryResponse', function() {
         // TODO: update the code to test DocumentQueryResponse
-        expect(instance).to.be.a(RestPkiCoreApi.DocumentQueryResponse);
+        expect(instance).to.be.a(RestPkiCoreClient.DocumentQueryResponse);
       });
 
       it('should have the property found (base name: "found")', function() {

@@ -1,4 +1,4 @@
-# RestPkiCoreApi.InspectSignatureFailures
+# RestPkiCoreClient.InspectSignatureFailures
 
 ## Enum
 

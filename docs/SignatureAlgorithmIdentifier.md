@@ -1,4 +1,4 @@
-# RestPkiCoreApi.SignatureAlgorithmIdentifier
+# RestPkiCoreClient.SignatureAlgorithmIdentifier
 
 ## Properties
 Name | Type | Description | Notes

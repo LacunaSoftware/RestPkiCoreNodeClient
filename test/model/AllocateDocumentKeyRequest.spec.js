@@ -21,9 +21,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.RestPkiCoreApi);
+    factory(root.expect, root.RestPkiCoreClient);
   }
-}(this, function(expect, RestPkiCoreApi) {
+}(this, function(expect, RestPkiCoreClient) {
   'use strict';
 
   var instance;
@@ -31,12 +31,12 @@
   describe('(package)', function() {
     describe('AllocateDocumentKeyRequest', function() {
       beforeEach(function() {
-        instance = new RestPkiCoreApi.AllocateDocumentKeyRequest();
+        instance = new RestPkiCoreClient.AllocateDocumentKeyRequest();
       });
 
       it('should create an instance of AllocateDocumentKeyRequest', function() {
         // TODO: update the code to test AllocateDocumentKeyRequest
-        expect(instance).to.be.a(RestPkiCoreApi.AllocateDocumentKeyRequest);
+        expect(instance).to.be.a(RestPkiCoreClient.AllocateDocumentKeyRequest);
       });
 
       it('should have the property provisionalMetadata (base name: "provisionalMetadata")', function() {

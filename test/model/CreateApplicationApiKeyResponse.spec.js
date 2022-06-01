@@ -21,9 +21,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.RestPkiCoreApi);
+    factory(root.expect, root.RestPkiCoreClient);
   }
-}(this, function(expect, RestPkiCoreApi) {
+}(this, function(expect, RestPkiCoreClient) {
   'use strict';
 
   var instance;
@@ -31,12 +31,12 @@
   describe('(package)', function() {
     describe('CreateApplicationApiKeyResponse', function() {
       beforeEach(function() {
-        instance = new RestPkiCoreApi.CreateApplicationApiKeyResponse();
+        instance = new RestPkiCoreClient.CreateApplicationApiKeyResponse();
       });
 
       it('should create an instance of CreateApplicationApiKeyResponse', function() {
         // TODO: update the code to test CreateApplicationApiKeyResponse
-        expect(instance).to.be.a(RestPkiCoreApi.CreateApplicationApiKeyResponse);
+        expect(instance).to.be.a(RestPkiCoreClient.CreateApplicationApiKeyResponse);
       });
 
       it('should have the property key (base name: "key")', function() {

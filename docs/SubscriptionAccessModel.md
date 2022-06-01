@@ -1,4 +1,4 @@
-# RestPkiCoreApi.SubscriptionAccessModel
+# RestPkiCoreClient.SubscriptionAccessModel
 
 ## Properties
 Name | Type | Description | Notes

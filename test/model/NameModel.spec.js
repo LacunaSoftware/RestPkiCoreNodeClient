@@ -21,9 +21,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.RestPkiCoreApi);
+    factory(root.expect, root.RestPkiCoreClient);
   }
-}(this, function(expect, RestPkiCoreApi) {
+}(this, function(expect, RestPkiCoreClient) {
   'use strict';
 
   var instance;
@@ -31,12 +31,12 @@
   describe('(package)', function() {
     describe('NameModel', function() {
       beforeEach(function() {
-        instance = new RestPkiCoreApi.NameModel();
+        instance = new RestPkiCoreClient.NameModel();
       });
 
       it('should create an instance of NameModel', function() {
         // TODO: update the code to test NameModel
-        expect(instance).to.be.a(RestPkiCoreApi.NameModel);
+        expect(instance).to.be.a(RestPkiCoreClient.NameModel);
       });
 
       it('should have the property country (base name: "country")', function() {

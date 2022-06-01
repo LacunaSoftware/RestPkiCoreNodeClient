@@ -1,4 +1,4 @@
-# RestPkiCoreApi.RootAuthorizationData
+# RestPkiCoreClient.RootAuthorizationData
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# RestPkiCoreApi.AuthenticationFailures
+# RestPkiCoreClient.AuthenticationFailures
 
 ## Enum
 

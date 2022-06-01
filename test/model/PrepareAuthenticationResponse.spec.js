@@ -21,9 +21,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.RestPkiCoreApi);
+    factory(root.expect, root.RestPkiCoreClient);
   }
-}(this, function(expect, RestPkiCoreApi) {
+}(this, function(expect, RestPkiCoreClient) {
   'use strict';
 
   var instance;
@@ -31,12 +31,12 @@
   describe('(package)', function() {
     describe('PrepareAuthenticationResponse', function() {
       beforeEach(function() {
-        instance = new RestPkiCoreApi.PrepareAuthenticationResponse();
+        instance = new RestPkiCoreClient.PrepareAuthenticationResponse();
       });
 
       it('should create an instance of PrepareAuthenticationResponse', function() {
         // TODO: update the code to test PrepareAuthenticationResponse
-        expect(instance).to.be.a(RestPkiCoreApi.PrepareAuthenticationResponse);
+        expect(instance).to.be.a(RestPkiCoreClient.PrepareAuthenticationResponse);
       });
 
       it('should have the property state (base name: "state")', function() {

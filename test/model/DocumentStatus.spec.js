@@ -21,9 +21,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.RestPkiCoreApi);
+    factory(root.expect, root.RestPkiCoreClient);
   }
-}(this, function(expect, RestPkiCoreApi) {
+}(this, function(expect, RestPkiCoreClient) {
   'use strict';
 
   var instance;
@@ -31,7 +31,7 @@
   describe('(package)', function() {
     describe('DocumentStatus', function() {
       beforeEach(function() {
-        instance = RestPkiCoreApi.DocumentStatus;
+        instance = RestPkiCoreClient.DocumentStatus;
       });
 
       it('should create an instance of DocumentStatus', function() {

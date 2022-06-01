@@ -21,9 +21,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.RestPkiCoreApi);
+    factory(root.expect, root.RestPkiCoreClient);
   }
-}(this, function(expect, RestPkiCoreApi) {
+}(this, function(expect, RestPkiCoreClient) {
   'use strict';
 
   var instance;
@@ -31,12 +31,12 @@
   describe('(package)', function() {
     describe('CreateSignatureSessionRequest', function() {
       beforeEach(function() {
-        instance = new RestPkiCoreApi.CreateSignatureSessionRequest();
+        instance = new RestPkiCoreClient.CreateSignatureSessionRequest();
       });
 
       it('should create an instance of CreateSignatureSessionRequest', function() {
         // TODO: update the code to test CreateSignatureSessionRequest
-        expect(instance).to.be.a(RestPkiCoreApi.CreateSignatureSessionRequest);
+        expect(instance).to.be.a(RestPkiCoreClient.CreateSignatureSessionRequest);
       });
 
       it('should have the property returnUrl (base name: "returnUrl")', function() {

@@ -1,4 +1,4 @@
-# RestPkiCoreApi.CmsSignatureOptions
+# RestPkiCoreClient.CmsSignatureOptions
 
 ## Properties
 Name | Type | Description | Notes

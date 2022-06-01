@@ -1,4 +1,4 @@
-# RestPkiCoreApi.ApplicationKeysController29Api
+# RestPkiCoreClient.ApplicationKeysController29Api
 
 All URIs are relative to */*
 
@@ -14,12 +14,12 @@ Method | HTTP request | Description
 
 ### Example
 ```javascript
-import {RestPkiCoreApi} from 'rest_pki_core_api';
+import {RestPkiCoreClient} from 'rest_pki_core_api';
 
-let apiInstance = new RestPkiCoreApi.ApplicationKeysController29Api();
+let apiInstance = new RestPkiCoreClient.ApplicationKeysController29Api();
 let appId = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // String | 
 let opts = { 
-  'body': new RestPkiCoreApi.CreateApplicationApiKeyRequest() // CreateApplicationApiKeyRequest | 
+  'body': new RestPkiCoreClient.CreateApplicationApiKeyRequest() // CreateApplicationApiKeyRequest | 
 };
 apiInstance.apiApplicationsAppIdApiKeysPost(appId, opts, (error, data, response) => {
   if (error) {

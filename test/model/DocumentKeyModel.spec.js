@@ -21,9 +21,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.RestPkiCoreApi);
+    factory(root.expect, root.RestPkiCoreClient);
   }
-}(this, function(expect, RestPkiCoreApi) {
+}(this, function(expect, RestPkiCoreClient) {
   'use strict';
 
   var instance;
@@ -31,12 +31,12 @@
   describe('(package)', function() {
     describe('DocumentKeyModel', function() {
       beforeEach(function() {
-        instance = new RestPkiCoreApi.DocumentKeyModel();
+        instance = new RestPkiCoreClient.DocumentKeyModel();
       });
 
       it('should create an instance of DocumentKeyModel', function() {
         // TODO: update the code to test DocumentKeyModel
-        expect(instance).to.be.a(RestPkiCoreApi.DocumentKeyModel);
+        expect(instance).to.be.a(RestPkiCoreClient.DocumentKeyModel);
       });
 
       it('should have the property key (base name: "key")', function() {

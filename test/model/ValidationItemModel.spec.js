@@ -21,9 +21,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.RestPkiCoreApi);
+    factory(root.expect, root.RestPkiCoreClient);
   }
-}(this, function(expect, RestPkiCoreApi) {
+}(this, function(expect, RestPkiCoreClient) {
   'use strict';
 
   var instance;
@@ -31,12 +31,12 @@
   describe('(package)', function() {
     describe('ValidationItemModel', function() {
       beforeEach(function() {
-        instance = new RestPkiCoreApi.ValidationItemModel();
+        instance = new RestPkiCoreClient.ValidationItemModel();
       });
 
       it('should create an instance of ValidationItemModel', function() {
         // TODO: update the code to test ValidationItemModel
-        expect(instance).to.be.a(RestPkiCoreApi.ValidationItemModel);
+        expect(instance).to.be.a(RestPkiCoreClient.ValidationItemModel);
       });
 
       it('should have the property type (base name: "type")', function() {

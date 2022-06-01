@@ -21,9 +21,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.RestPkiCoreApi);
+    factory(root.expect, root.RestPkiCoreClient);
   }
-}(this, function(expect, RestPkiCoreApi) {
+}(this, function(expect, RestPkiCoreClient) {
   'use strict';
 
   var instance;
@@ -31,12 +31,12 @@
   describe('(package)', function() {
     describe('SignatureAlgorithmAndValueModel', function() {
       beforeEach(function() {
-        instance = new RestPkiCoreApi.SignatureAlgorithmAndValueModel();
+        instance = new RestPkiCoreClient.SignatureAlgorithmAndValueModel();
       });
 
       it('should create an instance of SignatureAlgorithmAndValueModel', function() {
         // TODO: update the code to test SignatureAlgorithmAndValueModel
-        expect(instance).to.be.a(RestPkiCoreApi.SignatureAlgorithmAndValueModel);
+        expect(instance).to.be.a(RestPkiCoreClient.SignatureAlgorithmAndValueModel);
       });
 
       it('should have the property algorithmIdentifier (base name: "algorithmIdentifier")', function() {

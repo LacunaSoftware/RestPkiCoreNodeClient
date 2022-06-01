@@ -1,4 +1,4 @@
-# RestPkiCoreApi.DigestAlgorithms
+# RestPkiCoreClient.DigestAlgorithms
 
 ## Enum
 

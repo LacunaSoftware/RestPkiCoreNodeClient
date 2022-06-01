@@ -21,9 +21,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.RestPkiCoreApi);
+    factory(root.expect, root.RestPkiCoreClient);
   }
-}(this, function(expect, RestPkiCoreApi) {
+}(this, function(expect, RestPkiCoreClient) {
   'use strict';
 
   var instance;
@@ -31,12 +31,12 @@
   describe('(package)', function() {
     describe('AuthorizationData', function() {
       beforeEach(function() {
-        instance = new RestPkiCoreApi.AuthorizationData();
+        instance = new RestPkiCoreClient.AuthorizationData();
       });
 
       it('should create an instance of AuthorizationData', function() {
         // TODO: update the code to test AuthorizationData
-        expect(instance).to.be.a(RestPkiCoreApi.AuthorizationData);
+        expect(instance).to.be.a(RestPkiCoreClient.AuthorizationData);
       });
 
       it('should have the property roles (base name: "roles")', function() {

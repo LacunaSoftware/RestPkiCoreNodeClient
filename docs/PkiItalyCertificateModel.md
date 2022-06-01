@@ -1,4 +1,4 @@
-# RestPkiCoreApi.PkiItalyCertificateModel
+# RestPkiCoreClient.PkiItalyCertificateModel
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# RestPkiCoreApi.WebhookEventTypes
+# RestPkiCoreClient.WebhookEventTypes
 
 ## Enum
 

@@ -1,4 +1,4 @@
-# RestPkiCoreApi.SignatureSessionStatus
+# RestPkiCoreClient.SignatureSessionStatus
 
 ## Enum
 

@@ -1,4 +1,4 @@
-# RestPkiCoreApi.FileReferenceModel
+# RestPkiCoreClient.FileReferenceModel
 
 ## Properties
 Name | Type | Description | Notes

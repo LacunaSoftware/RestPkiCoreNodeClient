@@ -1,4 +1,4 @@
-# RestPkiCoreApi.DocumentStatus
+# RestPkiCoreClient.DocumentStatus
 
 ## Enum
 

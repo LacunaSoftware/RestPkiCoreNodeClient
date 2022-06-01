@@ -21,9 +21,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.RestPkiCoreApi);
+    factory(root.expect, root.RestPkiCoreClient);
   }
-}(this, function(expect, RestPkiCoreApi) {
+}(this, function(expect, RestPkiCoreClient) {
   'use strict';
 
   var instance;
@@ -31,12 +31,12 @@
   describe('(package)', function() {
     describe('InspectSignatureRequest', function() {
       beforeEach(function() {
-        instance = new RestPkiCoreApi.InspectSignatureRequest();
+        instance = new RestPkiCoreClient.InspectSignatureRequest();
       });
 
       it('should create an instance of InspectSignatureRequest', function() {
         // TODO: update the code to test InspectSignatureRequest
-        expect(instance).to.be.a(RestPkiCoreApi.InspectSignatureRequest);
+        expect(instance).to.be.a(RestPkiCoreClient.InspectSignatureRequest);
       });
 
       it('should have the property file (base name: "file")', function() {

@@ -1,4 +1,4 @@
-# RestPkiCoreApi.Roles
+# RestPkiCoreClient.Roles
 
 ## Enum
 

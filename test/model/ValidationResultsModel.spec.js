@@ -21,9 +21,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.RestPkiCoreApi);
+    factory(root.expect, root.RestPkiCoreClient);
   }
-}(this, function(expect, RestPkiCoreApi) {
+}(this, function(expect, RestPkiCoreClient) {
   'use strict';
 
   var instance;
@@ -31,12 +31,12 @@
   describe('(package)', function() {
     describe('ValidationResultsModel', function() {
       beforeEach(function() {
-        instance = new RestPkiCoreApi.ValidationResultsModel();
+        instance = new RestPkiCoreClient.ValidationResultsModel();
       });
 
       it('should create an instance of ValidationResultsModel', function() {
         // TODO: update the code to test ValidationResultsModel
-        expect(instance).to.be.a(RestPkiCoreApi.ValidationResultsModel);
+        expect(instance).to.be.a(RestPkiCoreClient.ValidationResultsModel);
       });
 
       it('should have the property passedChecks (base name: "passedChecks")', function() {

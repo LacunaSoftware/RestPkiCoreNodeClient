@@ -1,4 +1,4 @@
-# RestPkiCoreApi.DocumentsApi
+# RestPkiCoreClient.DocumentsApi
 
 All URIs are relative to */*
 
@@ -16,9 +16,9 @@ Retrieves a document&#x27;s details
 
 ### Example
 ```javascript
-import {RestPkiCoreApi} from 'rest_pki_core_api';
+import {RestPkiCoreClient} from 'rest_pki_core_api';
 
-let apiInstance = new RestPkiCoreApi.DocumentsApi();
+let apiInstance = new RestPkiCoreClient.DocumentsApi();
 let id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // String | 
 
 apiInstance.apiDocumentsIdGet(id, (error, data, response) => {
@@ -57,9 +57,9 @@ Retrieves the full information about each of a document&#x27;s signers
 
 ### Example
 ```javascript
-import {RestPkiCoreApi} from 'rest_pki_core_api';
+import {RestPkiCoreClient} from 'rest_pki_core_api';
 
-let apiInstance = new RestPkiCoreApi.DocumentsApi();
+let apiInstance = new RestPkiCoreClient.DocumentsApi();
 let id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // String | 
 
 apiInstance.apiDocumentsIdSignersGet(id, (error, data, response) => {
@@ -100,9 +100,9 @@ The key may be given either in formatted form (e.g. *XXXX-XXXX-XXXX-XXXX*) or un
 
 ### Example
 ```javascript
-import {RestPkiCoreApi} from 'rest_pki_core_api';
+import {RestPkiCoreClient} from 'rest_pki_core_api';
 
-let apiInstance = new RestPkiCoreApi.DocumentsApi();
+let apiInstance = new RestPkiCoreClient.DocumentsApi();
 let key = "key_example"; // String | 
 
 apiInstance.apiDocumentsKeysKeyGet(key, (error, data, response) => {

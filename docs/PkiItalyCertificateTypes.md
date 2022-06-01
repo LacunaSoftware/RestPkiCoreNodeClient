@@ -1,4 +1,4 @@
-# RestPkiCoreApi.PkiItalyCertificateTypes
+# RestPkiCoreClient.PkiItalyCertificateTypes
 
 ## Enum
 

@@ -21,9 +21,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.RestPkiCoreApi);
+    factory(root.expect, root.RestPkiCoreClient);
   }
-}(this, function(expect, RestPkiCoreApi) {
+}(this, function(expect, RestPkiCoreClient) {
   'use strict';
 
   var instance;
@@ -31,12 +31,12 @@
   describe('(package)', function() {
     describe('SessionCompletionStatus', function() {
       beforeEach(function() {
-        instance = new RestPkiCoreApi.SessionCompletionStatus();
+        instance = new RestPkiCoreClient.SessionCompletionStatus();
       });
 
       it('should create an instance of SessionCompletionStatus', function() {
         // TODO: update the code to test SessionCompletionStatus
-        expect(instance).to.be.a(RestPkiCoreApi.SessionCompletionStatus);
+        expect(instance).to.be.a(RestPkiCoreClient.SessionCompletionStatus);
       });
 
       it('should have the property completed (base name: "completed")', function() {

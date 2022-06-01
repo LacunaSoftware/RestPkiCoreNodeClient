@@ -1,4 +1,4 @@
-# RestPkiCoreApi.ApplicationKeyModel
+# RestPkiCoreClient.ApplicationKeyModel
 
 ## Properties
 Name | Type | Description | Notes

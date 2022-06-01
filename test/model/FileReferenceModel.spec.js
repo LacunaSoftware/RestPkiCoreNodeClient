@@ -21,9 +21,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.RestPkiCoreApi);
+    factory(root.expect, root.RestPkiCoreClient);
   }
-}(this, function(expect, RestPkiCoreApi) {
+}(this, function(expect, RestPkiCoreClient) {
   'use strict';
 
   var instance;
@@ -31,12 +31,12 @@
   describe('(package)', function() {
     describe('FileReferenceModel', function() {
       beforeEach(function() {
-        instance = new RestPkiCoreApi.FileReferenceModel();
+        instance = new RestPkiCoreClient.FileReferenceModel();
       });
 
       it('should create an instance of FileReferenceModel', function() {
         // TODO: update the code to test FileReferenceModel
-        expect(instance).to.be.a(RestPkiCoreApi.FileReferenceModel);
+        expect(instance).to.be.a(RestPkiCoreClient.FileReferenceModel);
       });
 
       it('should have the property mimeType (base name: "mimeType")', function() {

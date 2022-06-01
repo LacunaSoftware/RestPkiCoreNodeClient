@@ -21,9 +21,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.RestPkiCoreApi);
+    factory(root.expect, root.RestPkiCoreClient);
   }
-}(this, function(expect, RestPkiCoreApi) {
+}(this, function(expect, RestPkiCoreClient) {
   'use strict';
 
   var instance;
@@ -31,12 +31,12 @@
   describe('(package)', function() {
     describe('DocumentFileModel', function() {
       beforeEach(function() {
-        instance = new RestPkiCoreApi.DocumentFileModel();
+        instance = new RestPkiCoreClient.DocumentFileModel();
       });
 
       it('should create an instance of DocumentFileModel', function() {
         // TODO: update the code to test DocumentFileModel
-        expect(instance).to.be.a(RestPkiCoreApi.DocumentFileModel);
+        expect(instance).to.be.a(RestPkiCoreClient.DocumentFileModel);
       });
 
       it('should have the property mimeType (base name: "mimeType")', function() {

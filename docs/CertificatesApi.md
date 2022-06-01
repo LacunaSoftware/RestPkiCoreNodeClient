@@ -1,4 +1,4 @@
-# RestPkiCoreApi.CertificatesApi
+# RestPkiCoreClient.CertificatesApi
 
 All URIs are relative to */*
 
@@ -14,9 +14,9 @@ Retrieves information about a X.509 certificate previously used to sign some doc
 
 ### Example
 ```javascript
-import {RestPkiCoreApi} from 'rest_pki_core_api';
+import {RestPkiCoreClient} from 'rest_pki_core_api';
 
-let apiInstance = new RestPkiCoreApi.CertificatesApi();
+let apiInstance = new RestPkiCoreClient.CertificatesApi();
 let thumbprintSha256 = "thumbprintSha256_example"; // String | SHA-256 thumbprint in hexadecimal form of the certificate (property `thumbprintSHA256` of `CertificateModel`)
 let opts = { 
   'fillPemEncoded': true, // Boolean | Whether the response should include the complete certificate in PEM encoding on property `pemEncoded`. Pass `true` or `false`, if omitted `false` is assumed.

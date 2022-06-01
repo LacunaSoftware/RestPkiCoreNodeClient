@@ -1,4 +1,4 @@
-# RestPkiCoreApi.SignatureSessionDocumentSummary
+# RestPkiCoreClient.SignatureSessionDocumentSummary
 
 ## Properties
 Name | Type | Description | Notes

@@ -21,15 +21,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.RestPkiCoreApi);
+    factory(root.expect, root.RestPkiCoreClient);
   }
-}(this, function(expect, RestPkiCoreApi) {
+}(this, function(expect, RestPkiCoreClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new RestPkiCoreApi.DocumentKeysApi();
+    instance = new RestPkiCoreClient.DocumentKeysApi();
   });
 
   describe('(package)', function() {
@@ -51,7 +51,7 @@
             expect(dataCtr).to.not.be.empty();
             for (let p in dataCtr) {
               let data = dataCtr[p];
-              expect(data).to.be.a(RestPkiCoreApi.DocumentKeyModel);
+              expect(data).to.be.a(RestPkiCoreClient.DocumentKeyModel);
             }
 
             done();
@@ -72,7 +72,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(RestPkiCoreApi.DocumentKeyQueryResponse);
+            expect(data).to.be.a(RestPkiCoreClient.DocumentKeyQueryResponse);
 
             done();
           });
@@ -93,7 +93,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(RestPkiCoreApi.DocumentKeyModel);
+            expect(data).to.be.a(RestPkiCoreClient.DocumentKeyModel);
 
             done();
           });
@@ -119,7 +119,7 @@
             expect(dataCtr).to.not.be.empty();
             for (let p in dataCtr) {
               let data = dataCtr[p];
-              expect(data).to.be.a(RestPkiCoreApi.DocumentKeySummary);
+              expect(data).to.be.a(RestPkiCoreClient.DocumentKeySummary);
             }
 
             done();

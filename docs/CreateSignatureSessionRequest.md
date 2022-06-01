@@ -1,4 +1,4 @@
-# RestPkiCoreApi.CreateSignatureSessionRequest
+# RestPkiCoreClient.CreateSignatureSessionRequest
 
 ## Properties
 Name | Type | Description | Notes

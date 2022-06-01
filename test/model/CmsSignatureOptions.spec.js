@@ -21,9 +21,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.RestPkiCoreApi);
+    factory(root.expect, root.RestPkiCoreClient);
   }
-}(this, function(expect, RestPkiCoreApi) {
+}(this, function(expect, RestPkiCoreClient) {
   'use strict';
 
   var instance;
@@ -31,12 +31,12 @@
   describe('(package)', function() {
     describe('CmsSignatureOptions', function() {
       beforeEach(function() {
-        instance = new RestPkiCoreApi.CmsSignatureOptions();
+        instance = new RestPkiCoreClient.CmsSignatureOptions();
       });
 
       it('should create an instance of CmsSignatureOptions', function() {
         // TODO: update the code to test CmsSignatureOptions
-        expect(instance).to.be.a(RestPkiCoreApi.CmsSignatureOptions);
+        expect(instance).to.be.a(RestPkiCoreClient.CmsSignatureOptions);
       });
 
       it('should have the property detached (base name: "detached")', function() {

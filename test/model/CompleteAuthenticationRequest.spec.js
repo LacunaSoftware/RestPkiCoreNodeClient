@@ -21,9 +21,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.RestPkiCoreApi);
+    factory(root.expect, root.RestPkiCoreClient);
   }
-}(this, function(expect, RestPkiCoreApi) {
+}(this, function(expect, RestPkiCoreClient) {
   'use strict';
 
   var instance;
@@ -31,12 +31,12 @@
   describe('(package)', function() {
     describe('CompleteAuthenticationRequest', function() {
       beforeEach(function() {
-        instance = new RestPkiCoreApi.CompleteAuthenticationRequest();
+        instance = new RestPkiCoreClient.CompleteAuthenticationRequest();
       });
 
       it('should create an instance of CompleteAuthenticationRequest', function() {
         // TODO: update the code to test CompleteAuthenticationRequest
-        expect(instance).to.be.a(RestPkiCoreApi.CompleteAuthenticationRequest);
+        expect(instance).to.be.a(RestPkiCoreClient.CompleteAuthenticationRequest);
       });
 
       it('should have the property state (base name: "state")', function() {

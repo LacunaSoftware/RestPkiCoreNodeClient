@@ -1,4 +1,4 @@
-# RestPkiCoreApi.AuthenticationApi
+# RestPkiCoreClient.AuthenticationApi
 
 All URIs are relative to */*
 
@@ -15,11 +15,11 @@ Completes a certificate authentication
 
 ### Example
 ```javascript
-import {RestPkiCoreApi} from 'rest_pki_core_api';
+import {RestPkiCoreClient} from 'rest_pki_core_api';
 
-let apiInstance = new RestPkiCoreApi.AuthenticationApi();
+let apiInstance = new RestPkiCoreClient.AuthenticationApi();
 let opts = { 
-  'body': new RestPkiCoreApi.CompleteAuthenticationRequest() // CompleteAuthenticationRequest | 
+  'body': new RestPkiCoreClient.CompleteAuthenticationRequest() // CompleteAuthenticationRequest | 
 };
 apiInstance.apiV2AuthenticationCompletionPost(opts, (error, data, response) => {
   if (error) {
@@ -57,11 +57,11 @@ Prepares for a certificate authentication
 
 ### Example
 ```javascript
-import {RestPkiCoreApi} from 'rest_pki_core_api';
+import {RestPkiCoreClient} from 'rest_pki_core_api';
 
-let apiInstance = new RestPkiCoreApi.AuthenticationApi();
+let apiInstance = new RestPkiCoreClient.AuthenticationApi();
 let opts = { 
-  'body': new RestPkiCoreApi.PrepareAuthenticationRequest() // PrepareAuthenticationRequest | 
+  'body': new RestPkiCoreClient.PrepareAuthenticationRequest() // PrepareAuthenticationRequest | 
 };
 apiInstance.apiV2AuthenticationPost(opts, (error, data, response) => {
   if (error) {

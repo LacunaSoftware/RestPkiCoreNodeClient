@@ -1,4 +1,4 @@
-# RestPkiCoreApi.DigestAlgorithmAndValueModel
+# RestPkiCoreClient.DigestAlgorithmAndValueModel
 
 ## Properties
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# RestPkiCoreApi.SignatureAlgorithmAndValueModel
+# RestPkiCoreClient.SignatureAlgorithmAndValueModel
 
 ## Properties
 Name | Type | Description | Notes

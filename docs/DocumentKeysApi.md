@@ -1,4 +1,4 @@
-# RestPkiCoreApi.DocumentKeysApi
+# RestPkiCoreClient.DocumentKeysApi
 
 All URIs are relative to */*
 
@@ -19,11 +19,11 @@ At most 100 keys may be allocated on each request. Limitations on the total numb
 
 ### Example
 ```javascript
-import {RestPkiCoreApi} from 'rest_pki_core_api';
+import {RestPkiCoreClient} from 'rest_pki_core_api';
 
-let apiInstance = new RestPkiCoreApi.DocumentKeysApi();
+let apiInstance = new RestPkiCoreClient.DocumentKeysApi();
 let opts = { 
-  'body': new RestPkiCoreApi.AllocateDocumentKeyBatchRequest() // AllocateDocumentKeyBatchRequest | 
+  'body': new RestPkiCoreClient.AllocateDocumentKeyBatchRequest() // AllocateDocumentKeyBatchRequest | 
 };
 apiInstance.apiDocumentKeysBatchPost(opts, (error, data, response) => {
   if (error) {
@@ -63,9 +63,9 @@ The key may be given either in formatted form (e.g. *XXXX-XXXX-XXXX-XXXX*) or un
 
 ### Example
 ```javascript
-import {RestPkiCoreApi} from 'rest_pki_core_api';
+import {RestPkiCoreClient} from 'rest_pki_core_api';
 
-let apiInstance = new RestPkiCoreApi.DocumentKeysApi();
+let apiInstance = new RestPkiCoreClient.DocumentKeysApi();
 let key = "key_example"; // String | 
 
 apiInstance.apiDocumentKeysKeyGet(key, (error, data, response) => {
@@ -106,11 +106,11 @@ To allocate a number of document keys at once, use the &#x60;POST /api/document-
 
 ### Example
 ```javascript
-import {RestPkiCoreApi} from 'rest_pki_core_api';
+import {RestPkiCoreClient} from 'rest_pki_core_api';
 
-let apiInstance = new RestPkiCoreApi.DocumentKeysApi();
+let apiInstance = new RestPkiCoreClient.DocumentKeysApi();
 let opts = { 
-  'body': new RestPkiCoreApi.AllocateDocumentKeyRequest() // AllocateDocumentKeyRequest | 
+  'body': new RestPkiCoreClient.AllocateDocumentKeyRequest() // AllocateDocumentKeyRequest | 
 };
 apiInstance.apiDocumentKeysPost(opts, (error, data, response) => {
   if (error) {
@@ -148,9 +148,9 @@ Queries unused document keys
 
 ### Example
 ```javascript
-import {RestPkiCoreApi} from 'rest_pki_core_api';
+import {RestPkiCoreClient} from 'rest_pki_core_api';
 
-let apiInstance = new RestPkiCoreApi.DocumentKeysApi();
+let apiInstance = new RestPkiCoreClient.DocumentKeysApi();
 let opts = { 
   'metadataName': "metadataName_example", // String | 
   'metadataValue': "metadataValue_example" // String | 

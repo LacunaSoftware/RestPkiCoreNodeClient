@@ -1,4 +1,4 @@
-# RestPkiCoreApi.SignatureAlgorithms
+# RestPkiCoreClient.SignatureAlgorithms
 
 ## Enum
 

@@ -21,15 +21,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.RestPkiCoreApi);
+    factory(root.expect, root.RestPkiCoreClient);
   }
-}(this, function(expect, RestPkiCoreApi) {
+}(this, function(expect, RestPkiCoreClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new RestPkiCoreApi.DocumentsApi();
+    instance = new RestPkiCoreClient.DocumentsApi();
   });
 
   describe('(package)', function() {
@@ -45,7 +45,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(RestPkiCoreApi.DocumentModel);
+            expect(data).to.be.a(RestPkiCoreClient.DocumentModel);
 
             done();
           });
@@ -70,7 +70,7 @@
             expect(dataCtr).to.not.be.empty();
             for (let p in dataCtr) {
               let data = dataCtr[p];
-              expect(data).to.be.a(RestPkiCoreApi.SignerModel);
+              expect(data).to.be.a(RestPkiCoreClient.SignerModel);
             }
 
             done();
@@ -91,7 +91,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(RestPkiCoreApi.DocumentQueryResponse);
+            expect(data).to.be.a(RestPkiCoreClient.DocumentQueryResponse);
 
             done();
           });

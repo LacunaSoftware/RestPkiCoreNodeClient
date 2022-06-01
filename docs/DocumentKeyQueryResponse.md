@@ -1,4 +1,4 @@
-# RestPkiCoreApi.DocumentKeyQueryResponse
+# RestPkiCoreClient.DocumentKeyQueryResponse
 
 ## Properties
 Name | Type | Description | Notes

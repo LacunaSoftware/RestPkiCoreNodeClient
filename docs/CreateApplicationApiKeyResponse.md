@@ -1,4 +1,4 @@
-# RestPkiCoreApi.CreateApplicationApiKeyResponse
+# RestPkiCoreClient.CreateApplicationApiKeyResponse
 
 ## Properties
 Name | Type | Description | Notes

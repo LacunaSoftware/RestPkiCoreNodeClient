@@ -21,15 +21,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.RestPkiCoreApi);
+    factory(root.expect, root.RestPkiCoreClient);
   }
-}(this, function(expect, RestPkiCoreApi) {
+}(this, function(expect, RestPkiCoreClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new RestPkiCoreApi.ApplicationsController29Api();
+    instance = new RestPkiCoreClient.ApplicationsController29Api();
   });
 
   describe('(package)', function() {
@@ -46,7 +46,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(RestPkiCoreApi.SubscriptionAccessModelRolesRootRolesApplicationModelPaginatedSearchResponse);
+            expect(data).to.be.a(RestPkiCoreClient.SubscriptionAccessModelRolesRootRolesApplicationModelPaginatedSearchResponse);
 
             done();
           });
@@ -84,7 +84,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(RestPkiCoreApi.SubscriptionAccessModelRolesRootRolesApplicationModel);
+            expect(data).to.be.a(RestPkiCoreClient.SubscriptionAccessModelRolesRootRolesApplicationModel);
 
             done();
           });
@@ -127,7 +127,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(RestPkiCoreApi.SubscriptionAccessModelRolesRootRolesApplicationModel);
+            expect(data).to.be.a(RestPkiCoreClient.SubscriptionAccessModelRolesRootRolesApplicationModel);
 
             done();
           });

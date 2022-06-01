@@ -1,4 +1,4 @@
-# RestPkiCoreApi.ApplicationsApi
+# RestPkiCoreClient.ApplicationsApi
 
 All URIs are relative to */*
 
@@ -15,9 +15,9 @@ Returns the set of metadata values that is currently added for documents created
 
 ### Example
 ```javascript
-import {RestPkiCoreApi} from 'rest_pki_core_api';
+import {RestPkiCoreClient} from 'rest_pki_core_api';
 
-let apiInstance = new RestPkiCoreApi.ApplicationsApi();
+let apiInstance = new RestPkiCoreClient.ApplicationsApi();
 let id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // String | 
 
 apiInstance.apiApplicationsIdDefaultDocumentMetadataGet(id, (error, data, response) => {
@@ -56,9 +56,9 @@ Configures a set of metadata values to be added to each document created by the 
 
 ### Example
 ```javascript
-import {RestPkiCoreApi} from 'rest_pki_core_api';
+import {RestPkiCoreClient} from 'rest_pki_core_api';
 
-let apiInstance = new RestPkiCoreApi.ApplicationsApi();
+let apiInstance = new RestPkiCoreClient.ApplicationsApi();
 let id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // String | 
 let opts = { 
   'body': null // {String: [String]} | 

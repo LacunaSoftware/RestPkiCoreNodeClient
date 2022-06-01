@@ -21,9 +21,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.RestPkiCoreApi);
+    factory(root.expect, root.RestPkiCoreClient);
   }
-}(this, function(expect, RestPkiCoreApi) {
+}(this, function(expect, RestPkiCoreClient) {
   'use strict';
 
   var instance;
@@ -31,12 +31,12 @@
   describe('(package)', function() {
     describe('SignatureSessionDocumentData', function() {
       beforeEach(function() {
-        instance = new RestPkiCoreApi.SignatureSessionDocumentData();
+        instance = new RestPkiCoreClient.SignatureSessionDocumentData();
       });
 
       it('should create an instance of SignatureSessionDocumentData', function() {
         // TODO: update the code to test SignatureSessionDocumentData
-        expect(instance).to.be.a(RestPkiCoreApi.SignatureSessionDocumentData);
+        expect(instance).to.be.a(RestPkiCoreClient.SignatureSessionDocumentData);
       });
 
       it('should have the property id (base name: "id")', function() {

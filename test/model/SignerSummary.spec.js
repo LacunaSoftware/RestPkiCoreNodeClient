@@ -21,9 +21,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.RestPkiCoreApi);
+    factory(root.expect, root.RestPkiCoreClient);
   }
-}(this, function(expect, RestPkiCoreApi) {
+}(this, function(expect, RestPkiCoreClient) {
   'use strict';
 
   var instance;
@@ -31,12 +31,12 @@
   describe('(package)', function() {
     describe('SignerSummary', function() {
       beforeEach(function() {
-        instance = new RestPkiCoreApi.SignerSummary();
+        instance = new RestPkiCoreClient.SignerSummary();
       });
 
       it('should create an instance of SignerSummary', function() {
         // TODO: update the code to test SignerSummary
-        expect(instance).to.be.a(RestPkiCoreApi.SignerSummary);
+        expect(instance).to.be.a(RestPkiCoreClient.SignerSummary);
       });
 
       it('should have the property certificate (base name: "certificate")', function() {

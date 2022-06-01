@@ -1,4 +1,4 @@
-# RestPkiCoreApi.SubscriptionAccessModelRolesRootRolesApplicationModelPaginatedSearchResponse
+# RestPkiCoreClient.SubscriptionAccessModelRolesRootRolesApplicationModelPaginatedSearchResponse
 
 ## Properties
 Name | Type | Description | Notes

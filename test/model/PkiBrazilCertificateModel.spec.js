@@ -21,9 +21,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.RestPkiCoreApi);
+    factory(root.expect, root.RestPkiCoreClient);
   }
-}(this, function(expect, RestPkiCoreApi) {
+}(this, function(expect, RestPkiCoreClient) {
   'use strict';
 
   var instance;
@@ -31,12 +31,12 @@
   describe('(package)', function() {
     describe('PkiBrazilCertificateModel', function() {
       beforeEach(function() {
-        instance = new RestPkiCoreApi.PkiBrazilCertificateModel();
+        instance = new RestPkiCoreClient.PkiBrazilCertificateModel();
       });
 
       it('should create an instance of PkiBrazilCertificateModel', function() {
         // TODO: update the code to test PkiBrazilCertificateModel
-        expect(instance).to.be.a(RestPkiCoreApi.PkiBrazilCertificateModel);
+        expect(instance).to.be.a(RestPkiCoreClient.PkiBrazilCertificateModel);
       });
 
       it('should have the property certificateType (base name: "certificateType")', function() {

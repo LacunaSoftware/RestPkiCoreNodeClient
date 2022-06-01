@@ -1,4 +1,4 @@
-# RestPkiCoreApi.SessionCompletionStatus
+# RestPkiCoreClient.SessionCompletionStatus
 
 ## Properties
 Name | Type | Description | Notes

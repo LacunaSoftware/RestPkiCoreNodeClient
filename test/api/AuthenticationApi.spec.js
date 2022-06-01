@@ -21,15 +21,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.RestPkiCoreApi);
+    factory(root.expect, root.RestPkiCoreClient);
   }
-}(this, function(expect, RestPkiCoreApi) {
+}(this, function(expect, RestPkiCoreClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new RestPkiCoreApi.AuthenticationApi();
+    instance = new RestPkiCoreClient.AuthenticationApi();
   });
 
   describe('(package)', function() {
@@ -46,7 +46,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(RestPkiCoreApi.CompleteAuthenticationResponse);
+            expect(data).to.be.a(RestPkiCoreClient.CompleteAuthenticationResponse);
 
             done();
           });
@@ -67,7 +67,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(RestPkiCoreApi.PrepareAuthenticationResponse);
+            expect(data).to.be.a(RestPkiCoreClient.PrepareAuthenticationResponse);
 
             done();
           });

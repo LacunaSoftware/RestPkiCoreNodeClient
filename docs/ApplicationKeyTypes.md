@@ -1,4 +1,4 @@
-# RestPkiCoreApi.ApplicationKeyTypes
+# RestPkiCoreClient.ApplicationKeyTypes
 
 ## Enum
 

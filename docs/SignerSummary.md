@@ -1,4 +1,4 @@
-# RestPkiCoreApi.SignerSummary
+# RestPkiCoreClient.SignerSummary
 
 ## Properties
 Name | Type | Description | Notes

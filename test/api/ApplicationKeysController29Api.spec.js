@@ -21,15 +21,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.RestPkiCoreApi);
+    factory(root.expect, root.RestPkiCoreClient);
   }
-}(this, function(expect, RestPkiCoreApi) {
+}(this, function(expect, RestPkiCoreClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new RestPkiCoreApi.ApplicationKeysController29Api();
+    instance = new RestPkiCoreClient.ApplicationKeysController29Api();
   });
 
   describe('(package)', function() {
@@ -46,7 +46,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(RestPkiCoreApi.CreateApplicationApiKeyResponse);
+            expect(data).to.be.a(RestPkiCoreClient.CreateApplicationApiKeyResponse);
 
             done();
           });

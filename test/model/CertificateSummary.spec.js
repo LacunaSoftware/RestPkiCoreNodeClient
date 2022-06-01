@@ -21,9 +21,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.RestPkiCoreApi);
+    factory(root.expect, root.RestPkiCoreClient);
   }
-}(this, function(expect, RestPkiCoreApi) {
+}(this, function(expect, RestPkiCoreClient) {
   'use strict';
 
   var instance;
@@ -31,12 +31,12 @@
   describe('(package)', function() {
     describe('CertificateSummary', function() {
       beforeEach(function() {
-        instance = new RestPkiCoreApi.CertificateSummary();
+        instance = new RestPkiCoreClient.CertificateSummary();
       });
 
       it('should create an instance of CertificateSummary', function() {
         // TODO: update the code to test CertificateSummary
-        expect(instance).to.be.a(RestPkiCoreApi.CertificateSummary);
+        expect(instance).to.be.a(RestPkiCoreClient.CertificateSummary);
       });
 
       it('should have the property thumbprint (base name: "thumbprint")', function() {

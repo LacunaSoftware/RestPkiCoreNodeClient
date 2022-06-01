@@ -93,9 +93,9 @@ import {SignatureSessionsApi} from './api/SignatureSessionsApi';
 * <p>
 * An AMD (recommended!) or CommonJS application will generally do something equivalent to the following:
 * <pre>
-* var RestPkiCoreApi = require('index'); // See note below*.
-* var xxxSvc = new RestPkiCoreApi.XxxApi(); // Allocate the API class we're going to use.
-* var yyyModel = new RestPkiCoreApi.Yyy(); // Construct a model instance.
+* var RestPkiCoreClient = require('index'); // See note below*.
+* var xxxSvc = new RestPkiCoreClient.XxxApi(); // Allocate the API class we're going to use.
+* var yyyModel = new RestPkiCoreClient.Yyy(); // Construct a model instance.
 * yyyModel.someProperty = 'someValue';
 * ...
 * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.
@@ -107,8 +107,8 @@ import {SignatureSessionsApi} from './api/SignatureSessionsApi';
 * <p>
 * A non-AMD browser application (discouraged) might do something like this:
 * <pre>
-* var xxxSvc = new RestPkiCoreApi.XxxApi(); // Allocate the API class we're going to use.
-* var yyy = new RestPkiCoreApi.Yyy(); // Construct a model instance.
+* var xxxSvc = new RestPkiCoreClient.XxxApi(); // Allocate the API class we're going to use.
+* var yyy = new RestPkiCoreClient.Yyy(); // Construct a model instance.
 * yyyModel.someProperty = 'someValue';
 * ...
 * var zzz = xxxSvc.doSomething(yyyModel); // Invoke the service.

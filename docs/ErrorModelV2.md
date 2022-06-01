@@ -1,4 +1,4 @@
-# RestPkiCoreApi.ErrorModelV2
+# RestPkiCoreClient.ErrorModelV2
 
 ## Properties
 Name | Type | Description | Notes

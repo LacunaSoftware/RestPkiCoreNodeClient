@@ -1,4 +1,4 @@
-# RestPkiCoreApi.NameModel
+# RestPkiCoreClient.NameModel
 
 ## Properties
 Name | Type | Description | Notes

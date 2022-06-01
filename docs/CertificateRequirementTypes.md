@@ -1,4 +1,4 @@
-# RestPkiCoreApi.CertificateRequirementTypes
+# RestPkiCoreClient.CertificateRequirementTypes
 
 ## Enum
 

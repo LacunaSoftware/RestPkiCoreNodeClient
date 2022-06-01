@@ -21,9 +21,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.RestPkiCoreApi);
+    factory(root.expect, root.RestPkiCoreClient);
   }
-}(this, function(expect, RestPkiCoreApi) {
+}(this, function(expect, RestPkiCoreClient) {
   'use strict';
 
   var instance;
@@ -31,12 +31,12 @@
   describe('(package)', function() {
     describe('AuthorizationDataRootAuthorizationDataRolesRootRolesApplicationData', function() {
       beforeEach(function() {
-        instance = new RestPkiCoreApi.AuthorizationDataRootAuthorizationDataRolesRootRolesApplicationData();
+        instance = new RestPkiCoreClient.AuthorizationDataRootAuthorizationDataRolesRootRolesApplicationData();
       });
 
       it('should create an instance of AuthorizationDataRootAuthorizationDataRolesRootRolesApplicationData', function() {
         // TODO: update the code to test AuthorizationDataRootAuthorizationDataRolesRootRolesApplicationData
-        expect(instance).to.be.a(RestPkiCoreApi.AuthorizationDataRootAuthorizationDataRolesRootRolesApplicationData);
+        expect(instance).to.be.a(RestPkiCoreClient.AuthorizationDataRootAuthorizationDataRolesRootRolesApplicationData);
       });
 
       it('should have the property name (base name: "name")', function() {

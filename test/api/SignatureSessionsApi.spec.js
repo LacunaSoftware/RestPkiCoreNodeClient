@@ -21,15 +21,15 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.RestPkiCoreApi);
+    factory(root.expect, root.RestPkiCoreClient);
   }
-}(this, function(expect, RestPkiCoreApi) {
+}(this, function(expect, RestPkiCoreClient) {
   'use strict';
 
   var instance;
 
   beforeEach(function() {
-    instance = new RestPkiCoreApi.SignatureSessionsApi();
+    instance = new RestPkiCoreClient.SignatureSessionsApi();
   });
 
   describe('(package)', function() {
@@ -45,7 +45,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(RestPkiCoreApi.SignatureSessionModel);
+            expect(data).to.be.a(RestPkiCoreClient.SignatureSessionModel);
 
             done();
           });
@@ -65,7 +65,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(RestPkiCoreApi.SessionCompletionStatus);
+            expect(data).to.be.a(RestPkiCoreClient.SessionCompletionStatus);
 
             done();
           });
@@ -86,7 +86,7 @@
               return;
             }
             // TODO: update response assertions
-            expect(data).to.be.a(RestPkiCoreApi.CreateSignatureSessionResponse);
+            expect(data).to.be.a(RestPkiCoreClient.CreateSignatureSessionResponse);
 
             done();
           });

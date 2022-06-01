@@ -1,4 +1,4 @@
-# RestPkiCoreApi.SignatureSessionsApi
+# RestPkiCoreClient.SignatureSessionsApi
 
 All URIs are relative to */*
 
@@ -19,9 +19,9 @@ When a user is redirected back to your application at the end of a signature ses
 
 ### Example
 ```javascript
-import {RestPkiCoreApi} from 'rest_pki_core_api';
+import {RestPkiCoreClient} from 'rest_pki_core_api';
 
-let apiInstance = new RestPkiCoreApi.SignatureSessionsApi();
+let apiInstance = new RestPkiCoreClient.SignatureSessionsApi();
 let id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // String | 
 
 apiInstance.apiSignatureSessionsIdGet(id, (error, data, response) => {
@@ -62,9 +62,9 @@ This API can be used when background processing is enabled on a signature sessio
 
 ### Example
 ```javascript
-import {RestPkiCoreApi} from 'rest_pki_core_api';
+import {RestPkiCoreClient} from 'rest_pki_core_api';
 
-let apiInstance = new RestPkiCoreApi.SignatureSessionsApi();
+let apiInstance = new RestPkiCoreClient.SignatureSessionsApi();
 let id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // String | 
 
 apiInstance.apiSignatureSessionsIdWhenCompletedGet(id, (error, data, response) => {
@@ -106,11 +106,11 @@ This API creates a **signature session**, which enables your users to perform di
 
 ### Example
 ```javascript
-import {RestPkiCoreApi} from 'rest_pki_core_api';
+import {RestPkiCoreClient} from 'rest_pki_core_api';
 
-let apiInstance = new RestPkiCoreApi.SignatureSessionsApi();
+let apiInstance = new RestPkiCoreClient.SignatureSessionsApi();
 let opts = { 
-  'body': new RestPkiCoreApi.CreateSignatureSessionRequest() // CreateSignatureSessionRequest | 
+  'body': new RestPkiCoreClient.CreateSignatureSessionRequest() // CreateSignatureSessionRequest | 
 };
 apiInstance.apiSignatureSessionsPost(opts, (error, data, response) => {
   if (error) {

@@ -1,4 +1,4 @@
-# RestPkiCoreApi.ApplicationsController29Api
+# RestPkiCoreClient.ApplicationsController29Api
 
 All URIs are relative to */*
 
@@ -18,14 +18,14 @@ Method | HTTP request | Description
 
 ### Example
 ```javascript
-import {RestPkiCoreApi} from 'rest_pki_core_api';
+import {RestPkiCoreClient} from 'rest_pki_core_api';
 
-let apiInstance = new RestPkiCoreApi.ApplicationsController29Api();
+let apiInstance = new RestPkiCoreClient.ApplicationsController29Api();
 let opts = { 
   'Q': "Q_example", // String | 
   'limit': 56, // Number | 
   'offset': 56, // Number | 
-  'order': new RestPkiCoreApi.PaginationOrders(), // PaginationOrders | 
+  'order': new RestPkiCoreClient.PaginationOrders(), // PaginationOrders | 
   'name': "name_example" // String | 
 };
 apiInstance.apiApplicationsGet(opts, (error, data, response) => {
@@ -68,9 +68,9 @@ No authorization required
 
 ### Example
 ```javascript
-import {RestPkiCoreApi} from 'rest_pki_core_api';
+import {RestPkiCoreClient} from 'rest_pki_core_api';
 
-let apiInstance = new RestPkiCoreApi.ApplicationsController29Api();
+let apiInstance = new RestPkiCoreClient.ApplicationsController29Api();
 let id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // String | 
 
 apiInstance.apiApplicationsIdDelete(id, (error, data, response) => {
@@ -109,9 +109,9 @@ No authorization required
 
 ### Example
 ```javascript
-import {RestPkiCoreApi} from 'rest_pki_core_api';
+import {RestPkiCoreClient} from 'rest_pki_core_api';
 
-let apiInstance = new RestPkiCoreApi.ApplicationsController29Api();
+let apiInstance = new RestPkiCoreClient.ApplicationsController29Api();
 let id = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // String | 
 
 apiInstance.apiApplicationsIdGet(id, (error, data, response) => {
@@ -150,9 +150,9 @@ No authorization required
 
 ### Example
 ```javascript
-import {RestPkiCoreApi} from 'rest_pki_core_api';
+import {RestPkiCoreClient} from 'rest_pki_core_api';
 
-let apiInstance = new RestPkiCoreApi.ApplicationsController29Api();
+let apiInstance = new RestPkiCoreClient.ApplicationsController29Api();
 let opts = { 
   'name': "name_example" // String | 
 };
@@ -192,11 +192,11 @@ No authorization required
 
 ### Example
 ```javascript
-import {RestPkiCoreApi} from 'rest_pki_core_api';
+import {RestPkiCoreClient} from 'rest_pki_core_api';
 
-let apiInstance = new RestPkiCoreApi.ApplicationsController29Api();
+let apiInstance = new RestPkiCoreClient.ApplicationsController29Api();
 let opts = { 
-  'body': new RestPkiCoreApi.AuthorizationDataRootAuthorizationDataRolesRootRolesApplicationData() // AuthorizationDataRootAuthorizationDataRolesRootRolesApplicationData | 
+  'body': new RestPkiCoreClient.AuthorizationDataRootAuthorizationDataRolesRootRolesApplicationData() // AuthorizationDataRootAuthorizationDataRolesRootRolesApplicationData | 
 };
 apiInstance.apiApplicationsPost(opts, (error, data, response) => {
   if (error) {

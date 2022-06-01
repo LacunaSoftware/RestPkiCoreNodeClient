@@ -1,4 +1,4 @@
-# RestPkiCoreApi.InspectSignatureResponse
+# RestPkiCoreClient.InspectSignatureResponse
 
 ## Properties
 Name | Type | Description | Notes

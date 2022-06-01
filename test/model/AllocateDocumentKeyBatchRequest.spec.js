@@ -21,9 +21,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.RestPkiCoreApi);
+    factory(root.expect, root.RestPkiCoreClient);
   }
-}(this, function(expect, RestPkiCoreApi) {
+}(this, function(expect, RestPkiCoreClient) {
   'use strict';
 
   var instance;
@@ -31,12 +31,12 @@
   describe('(package)', function() {
     describe('AllocateDocumentKeyBatchRequest', function() {
       beforeEach(function() {
-        instance = new RestPkiCoreApi.AllocateDocumentKeyBatchRequest();
+        instance = new RestPkiCoreClient.AllocateDocumentKeyBatchRequest();
       });
 
       it('should create an instance of AllocateDocumentKeyBatchRequest', function() {
         // TODO: update the code to test AllocateDocumentKeyBatchRequest
-        expect(instance).to.be.a(RestPkiCoreApi.AllocateDocumentKeyBatchRequest);
+        expect(instance).to.be.a(RestPkiCoreClient.AllocateDocumentKeyBatchRequest);
       });
 
       it('should have the property count (base name: "count")', function() {

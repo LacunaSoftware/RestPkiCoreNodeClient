@@ -1,4 +1,4 @@
-# RestPkiCoreApi.AllocateDocumentKeyRequest
+# RestPkiCoreClient.AllocateDocumentKeyRequest
 
 ## Properties
 Name | Type | Description | Notes

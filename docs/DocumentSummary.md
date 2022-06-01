@@ -1,4 +1,4 @@
-# RestPkiCoreApi.DocumentSummary
+# RestPkiCoreClient.DocumentSummary
 
 ## Properties
 Name | Type | Description | Notes

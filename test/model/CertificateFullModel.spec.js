@@ -21,9 +21,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.RestPkiCoreApi);
+    factory(root.expect, root.RestPkiCoreClient);
   }
-}(this, function(expect, RestPkiCoreApi) {
+}(this, function(expect, RestPkiCoreClient) {
   'use strict';
 
   var instance;
@@ -31,12 +31,12 @@
   describe('(package)', function() {
     describe('CertificateFullModel', function() {
       beforeEach(function() {
-        instance = new RestPkiCoreApi.CertificateFullModel();
+        instance = new RestPkiCoreClient.CertificateFullModel();
       });
 
       it('should create an instance of CertificateFullModel', function() {
         // TODO: update the code to test CertificateFullModel
-        expect(instance).to.be.a(RestPkiCoreApi.CertificateFullModel);
+        expect(instance).to.be.a(RestPkiCoreClient.CertificateFullModel);
       });
 
       it('should have the property encoded (base name: "encoded")', function() {

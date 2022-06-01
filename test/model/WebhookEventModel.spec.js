@@ -21,9 +21,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.RestPkiCoreApi);
+    factory(root.expect, root.RestPkiCoreClient);
   }
-}(this, function(expect, RestPkiCoreApi) {
+}(this, function(expect, RestPkiCoreClient) {
   'use strict';
 
   var instance;
@@ -31,12 +31,12 @@
   describe('(package)', function() {
     describe('WebhookEventModel', function() {
       beforeEach(function() {
-        instance = new RestPkiCoreApi.WebhookEventModel();
+        instance = new RestPkiCoreClient.WebhookEventModel();
       });
 
       it('should create an instance of WebhookEventModel', function() {
         // TODO: update the code to test WebhookEventModel
-        expect(instance).to.be.a(RestPkiCoreApi.WebhookEventModel);
+        expect(instance).to.be.a(RestPkiCoreClient.WebhookEventModel);
       });
 
       it('should have the property type (base name: "type")', function() {

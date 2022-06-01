@@ -1,4 +1,4 @@
-# RestPkiCoreApi.SignatureInspectionApi
+# RestPkiCoreClient.SignatureInspectionApi
 
 All URIs are relative to */*
 
@@ -17,11 +17,11 @@ The simplest usage of this API is by simply passing the &#x60;file&#x60; to be i
 
 ### Example
 ```javascript
-import {RestPkiCoreApi} from 'rest_pki_core_api';
+import {RestPkiCoreClient} from 'rest_pki_core_api';
 
-let apiInstance = new RestPkiCoreApi.SignatureInspectionApi();
+let apiInstance = new RestPkiCoreClient.SignatureInspectionApi();
 let opts = { 
-  'body': new RestPkiCoreApi.InspectSignatureRequest() // InspectSignatureRequest | 
+  'body': new RestPkiCoreClient.InspectSignatureRequest() // InspectSignatureRequest | 
 };
 apiInstance.apiSignatureInspectionPut(opts, (error, data, response) => {
   if (error) {

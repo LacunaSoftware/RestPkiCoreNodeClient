@@ -1,4 +1,4 @@
-# RestPkiCoreApi.PrepareAuthenticationRequest
+# RestPkiCoreClient.PrepareAuthenticationRequest
 
 ## Properties
 Name | Type | Description | Notes

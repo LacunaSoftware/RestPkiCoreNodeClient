@@ -1,4 +1,4 @@
-# RestPkiCoreApi.ValidationItemModel
+# RestPkiCoreClient.ValidationItemModel
 
 ## Properties
 Name | Type | Description | Notes

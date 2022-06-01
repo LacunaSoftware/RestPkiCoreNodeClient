@@ -21,9 +21,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.RestPkiCoreApi);
+    factory(root.expect, root.RestPkiCoreClient);
   }
-}(this, function(expect, RestPkiCoreApi) {
+}(this, function(expect, RestPkiCoreClient) {
   'use strict';
 
   var instance;
@@ -31,12 +31,12 @@
   describe('(package)', function() {
     describe('DigestAlgorithmAndValueModel', function() {
       beforeEach(function() {
-        instance = new RestPkiCoreApi.DigestAlgorithmAndValueModel();
+        instance = new RestPkiCoreClient.DigestAlgorithmAndValueModel();
       });
 
       it('should create an instance of DigestAlgorithmAndValueModel', function() {
         // TODO: update the code to test DigestAlgorithmAndValueModel
-        expect(instance).to.be.a(RestPkiCoreApi.DigestAlgorithmAndValueModel);
+        expect(instance).to.be.a(RestPkiCoreClient.DigestAlgorithmAndValueModel);
       });
 
       it('should have the property algorithm (base name: "algorithm")', function() {

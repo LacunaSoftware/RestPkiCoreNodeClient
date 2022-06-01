@@ -1,4 +1,4 @@
-# RestPkiCoreApi.SignatureTypes
+# RestPkiCoreClient.SignatureTypes
 
 ## Enum
 

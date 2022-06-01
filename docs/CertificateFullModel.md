@@ -1,4 +1,4 @@
-# RestPkiCoreApi.CertificateFullModel
+# RestPkiCoreClient.CertificateFullModel
 
 ## Properties
 Name | Type | Description | Notes

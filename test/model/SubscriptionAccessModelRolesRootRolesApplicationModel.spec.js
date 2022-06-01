@@ -21,9 +21,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.RestPkiCoreApi);
+    factory(root.expect, root.RestPkiCoreClient);
   }
-}(this, function(expect, RestPkiCoreApi) {
+}(this, function(expect, RestPkiCoreClient) {
   'use strict';
 
   var instance;
@@ -31,12 +31,12 @@
   describe('(package)', function() {
     describe('SubscriptionAccessModelRolesRootRolesApplicationModel', function() {
       beforeEach(function() {
-        instance = new RestPkiCoreApi.SubscriptionAccessModelRolesRootRolesApplicationModel();
+        instance = new RestPkiCoreClient.SubscriptionAccessModelRolesRootRolesApplicationModel();
       });
 
       it('should create an instance of SubscriptionAccessModelRolesRootRolesApplicationModel', function() {
         // TODO: update the code to test SubscriptionAccessModelRolesRootRolesApplicationModel
-        expect(instance).to.be.a(RestPkiCoreApi.SubscriptionAccessModelRolesRootRolesApplicationModel);
+        expect(instance).to.be.a(RestPkiCoreClient.SubscriptionAccessModelRolesRootRolesApplicationModel);
       });
 
       it('should have the property id (base name: "id")', function() {

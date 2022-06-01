@@ -1,4 +1,4 @@
-# RestPkiCoreApi.PkiBrazilCertificateModel
+# RestPkiCoreClient.PkiBrazilCertificateModel
 
 ## Properties
 Name | Type | Description | Notes

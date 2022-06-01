@@ -1,4 +1,4 @@
-# RestPkiCoreApi.PaginationOrders
+# RestPkiCoreClient.PaginationOrders
 
 ## Enum
 

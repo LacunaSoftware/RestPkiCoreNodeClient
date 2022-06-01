@@ -21,9 +21,9 @@
     factory(require('expect.js'), require('../../src/index'));
   } else {
     // Browser globals (root is window)
-    factory(root.expect, root.RestPkiCoreApi);
+    factory(root.expect, root.RestPkiCoreClient);
   }
-}(this, function(expect, RestPkiCoreApi) {
+}(this, function(expect, RestPkiCoreClient) {
   'use strict';
 
   var instance;
@@ -31,12 +31,12 @@
   describe('(package)', function() {
     describe('ErrorModelV2', function() {
       beforeEach(function() {
-        instance = new RestPkiCoreApi.ErrorModelV2();
+        instance = new RestPkiCoreClient.ErrorModelV2();
       });
 
       it('should create an instance of ErrorModelV2', function() {
         // TODO: update the code to test ErrorModelV2
-        expect(instance).to.be.a(RestPkiCoreApi.ErrorModelV2);
+        expect(instance).to.be.a(RestPkiCoreClient.ErrorModelV2);
       });
 
       it('should have the property validationResults (base name: "validationResults")', function() {

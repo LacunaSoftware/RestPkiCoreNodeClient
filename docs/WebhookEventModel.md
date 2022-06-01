@@ -1,4 +1,4 @@
-# RestPkiCoreApi.WebhookEventModel
+# RestPkiCoreClient.WebhookEventModel
 
 ## Properties
 Name | Type | Description | Notes
