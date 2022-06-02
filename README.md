@@ -3,7 +3,7 @@
 RestPkiCore-Client - node.js client lib for RestPkiCoreClient
 
 - API version: 1.10.1 RTM
-- Package version: 1.0.0
+- Package version: 1.0.1
 - Build package: io.swagger.codegen.v3.generators.javascript.JavaScriptClientCodegen
 
 ## Installation
@@ -18,24 +18,29 @@ npm install rest_pki_core_api --save
 
 ## Getting Started
 
-Please follow the [installation](#installation) instruction and execute the following JS code:
+Please follow the [installation](#installation) instruction, then create and execute the following JS code:
 
 ```javascript
-var RestPkiCoreApi = require('rest_pki_core_api');
+import { ApiClient, SignatureSessionsApi, API_KEY_HEADER } from 'restpkicore-client';
 
-var api = new RestPkiCoreApi.ApplicationKeysController29Api()
-var appId = "38400000-8cf0-11bd-b23e-10b96e4ef00d"; // {String} 
-var opts = { 
-  'body': new RestPkiCoreApi.CreateApplicationApiKeyRequest() // {CreateApplicationApiKeyRequest} 
-};
-var callback = function(error, data, response) {
+var apiClient = ApiClient.instance;
+apiClient.basePath = "https://core.pki.rest"
+apiClient.defaultHeaders = {
+    API_KEY_HEADER
+}
+
+new SignatureSessionsApi(apiClient).apiSignatureSessionsIdGet('3fa85f64-5717-4562-b3fc-2c963f66afa6', (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
     console.log('API called successfully. Returned data: ' + data);
   }
-};
-api.apiApplicationsAppIdApiKeysPost(appId, opts, callback);
+});
+```
+
+Run with the following code on terminal (remember to replace the filename!):
+```javascript
+node --experimental-specifier-resolution=node yourcode.js
 ```
 
 ## Documentation for API Endpoints
