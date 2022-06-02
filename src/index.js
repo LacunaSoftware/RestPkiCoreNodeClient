@@ -512,7 +512,7 @@ export {
 
     
     /**
-    * The SignatureSessionsApi service constructor.
+    * The API key header.
     * @property {module:model/API_KEY_HEADER}
     */
      API_KEY_HEADER,
