@@ -515,7 +515,7 @@ export {
     * The SignatureSessionsApi service constructor.
     * @property {module:model/API_KEY_HEADER}
     */
-     SignatureSessionsApi,
+     API_KEY_HEADER,
 
     /**
     * The ApplicationKeysController29Api service constructor.
