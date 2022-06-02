@@ -3,7 +3,7 @@
 RestPkiCore-Client - node.js client lib for RestPkiCoreClient
 
 - API version: 1.10.1 RTM
-- Package version: 1.0.1
+- Package version: 1.0.2
 - Build package: io.swagger.codegen.v3.generators.javascript.JavaScriptClientCodegen
 
 ## Installation
@@ -13,7 +13,7 @@ RestPkiCore-Client - node.js client lib for RestPkiCoreClient
 Install it via:
 
 ```shell
-npm install rest_pki_core_api --save
+npm install restpkicore-client --save
 ```
 
 ## Getting Started
