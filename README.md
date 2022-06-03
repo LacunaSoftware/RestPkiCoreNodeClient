@@ -3,7 +3,7 @@
 RestPkiCore-Client - node.js client lib for RestPkiCoreClient
 
 - API version: 1.10.1 RTM
-- Package version: 1.0.1
+- Package version: 1.0.3
 - Build package: io.swagger.codegen.v3.generators.javascript.JavaScriptClientCodegen
 
 ## Installation
@@ -24,10 +24,8 @@ Please follow the [installation](#installation) instruction, then create and exe
 import { ApiClient, SignatureSessionsApi, API_KEY_HEADER } from 'restpkicore-client';
 
 var apiClient = ApiClient.instance;
-apiClient.basePath = "https://core.pki.rest"
-apiClient.defaultHeaders = {
-    API_KEY_HEADER
-}
+apiClient.basePath = "https://core.pki.rest";
+apiClient.defaultHeaders = API_KEY_HEADER;
 
 new SignatureSessionsApi(apiClient).apiSignatureSessionsIdGet('3fa85f64-5717-4562-b3fc-2c963f66afa6', (error, data, response) => {
   if (error) {
