@@ -13,7 +13,7 @@ RestPkiCore-Client - node.js client lib for RestPkiCoreClient
 Install it via:
 
 ```shell
-npm install rest_pki_core_api --save
+npm install restpkicore-client --save
 ```
 
 ## Getting Started
