@@ -377,7 +377,7 @@ MIT License - See LICENSE file for details.
 
 ## 🏷️ Version
 
-Current version: 1.0.1  
+Current version: 1.0.2  
 Compatible with: Node.js 12+, TypeScript 3.7+
 
 ---

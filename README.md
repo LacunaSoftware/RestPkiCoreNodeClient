@@ -103,7 +103,7 @@ The library uses a comprehensive JSON configuration file for OpenAPI generation:
   "outputDir": "./generated-client",
   "additionalProperties": {
     "npmName": "restpki-core-client",
-    "npmVersion": "1.0.1",
+    "npmVersion": "1.0.2",
     "supportsES6": true,
     "withInterfaces": true,
     "typescriptThreePlus": true,
@@ -415,7 +415,7 @@ npm view restpki-core-client  # Verify publication
 
 ## 🏷️ Version History
 
-- **v1.0.1** - Initial release with full API coverage
+- **v1.0.2** - Initial release with full API coverage
 - **v1.0.0** - Beta release with basic functionality
 
 ## 📄 License
