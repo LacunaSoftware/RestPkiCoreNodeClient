@@ -81,7 +81,13 @@ try {
         Write-Warning "JavaScript client file not found: rest-pki-core-client.js"
     }
 
-  
+    # Copy README.md file
+    if (Test-Path "README.md") {
+        Copy-Item -Path "README.md" -Destination "$OutputDir/README.md"
+        Write-Host "  README.md file added: README.md" -ForegroundColor Green
+    } else {
+        Write-Warning "README.md file not found: README.md"
+    }
 
     # Update the main API exports to include the client
     Write-Host "Updating main API exports to include client..." -ForegroundColor Yellow

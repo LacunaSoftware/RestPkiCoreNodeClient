@@ -1,3 +1,6 @@
 node_modules
 package-lock.json
 apikey.js
+*-example.js
+*-example.ts
+usage-examples-constants.js
