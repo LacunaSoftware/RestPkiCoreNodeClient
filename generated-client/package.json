@@ -1,6 +1,6 @@
 {
     "name": "restpki-core-client",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "NodeJS client for restpki-core-client",
     "repository": {
         "type": "git",
